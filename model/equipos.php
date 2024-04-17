@@ -10,10 +10,10 @@ class Equipos {
         $this->conexion = $conexion;
     }
 
-    public function insertarEquipo($tipo_id,$nombre,) {
+    public function insertarEquipo($equipo_id,$nombre) {
         try {
-            $consulta = $this->conexion->prepare("INSERT INTO Equipos_Agricola (equipo_id,nombre) VALUES (?,?)");
-            $consulta ->bindParam(1,$tipo_id);
+            $consulta = $this->conexion->prepare("INSERT INTO Equipos_Agricolas (equipo_id,nombre) VALUES (?,?)");
+            $consulta ->bindParam(1,$equipo_id);
             $consulta->bindParam(2, $nombre);
             
             $consulta->execute();

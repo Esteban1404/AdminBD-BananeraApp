@@ -340,12 +340,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- Campo de Teléfono -->
                 <div class="mb-3">
                 <label for="id" class="form-label">Id:</label>
-                <input type="number" class="form-control" id="id" placeholder="Ingresar id">
+                <input type="number" name="id" class="form-control" id="id" placeholder="Ingresar id">
               </div>
 
               <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ingresar nombre">
+                <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Ingresar nombre">
               </div>
 
             

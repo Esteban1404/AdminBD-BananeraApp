@@ -389,9 +389,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- AdminLTE App -->
   <script src="../js/adminlte.min.js"></script>
   <!-- Funcion Js para insertar datos en la BD -->
-  <script src="../js/datos.js"></script>
+  <script src="../js/banana.js"></script>
 
-  <script src="../plugins/DataTables/datatables.min.js"></script>
+ 
   <script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap4.min.js"></script>
   <script src="../plugins/bootbox/bootbox.min.js"></script>
 </body>

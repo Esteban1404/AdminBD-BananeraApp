@@ -45,8 +45,8 @@ class EmpleadosController {
 // Ejemplo de uso
 try {
     $conexion = Conexion::conectar();
-    $paisController = new PaisesController($conexion);
-    $paisController->agregarPais();
+    $empleadoController = new EmpleadosController($conexion);
+    $empleadoController->agregarEmpleado();
 } catch (PDOException $ex) {
     echo "Error al conectar a la base de datos Oracle: " . $ex->getMessage();
 }

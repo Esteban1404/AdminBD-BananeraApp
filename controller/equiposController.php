@@ -7,18 +7,19 @@ class EquiposController {
     private $equipo;
 
     public function __construct($conexion) {
-        $this->equipo = new Equipos($conexion);
+        $this->equipo = new Equipos ($conexion);
     }
 
     public function agregarEquipo() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Recibir datos del formulario HTML
-            $tipo_id=$_POST['id'];
-            $nombre = $_POST['nombre'];
+            $equipo_id=$_POST['id'];
+            $nombre=$_POST['nombre'];
+            
             
 
             // Insertar la nueva plantación en la base de datos
-            $exito = $this->equipo->insertarEquipo($tipo_id,$nombre);
+            $exito = $this->equipo->insertarEquipo($equipo_id,$nombre);
 
             if ($exito) {
                 // Redirigir o mostrar un mensaje de éxito
@@ -39,8 +40,8 @@ class EquiposController {
 // Ejemplo de uso
 try {
     $conexion = Conexion::conectar();
-    $paisController = new PaisesController($conexion);
-    $paisController->agregarPais();
+    $equipoController = new EquiposController($conexion);
+    $equipoController->agregarEquipo();
 } catch (PDOException $ex) {
     echo "Error al conectar a la base de datos Oracle: " . $ex->getMessage();
 }
