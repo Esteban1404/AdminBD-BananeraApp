@@ -13,12 +13,12 @@ class PlantacionController {
     public function agregarPlantacion() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Recibir datos del formulario HTML
-            $plantacion_id=$_POST['id'];
+           
             $nombre = $_POST['nombre'];
             $ubicacion_id = $_POST['idUbicacion'];
 
             // Insertar la nueva plantación en la base de datos
-            $exito = $this->plantacionModel->insertarPlantacion($plantacion_id,$nombre, $ubicacion_id);
+            $exito = $this->plantacionModel->insertarPlantacion($nombre, $ubicacion_id);
 
             if ($exito) {
                 // Redirigir o mostrar un mensaje de éxito

@@ -17,7 +17,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Theme style -->
   <link rel="stylesheet" href="../css/adminlte.min.css">
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="..plugins/fontawesome-free/css/all.min.css">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
@@ -350,13 +349,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <h2>Resultados de la Búsqueda</h2>
               <table id="tbllistado" class="table table-striped table-bordered table-hover">
               <thead>
-                <th>Cosechas Plantacion</th>
+                <th> Plantacion</th>
+                <th> Fecha</th>
+                <th> Cantidad</th>
+
+
 
               </thead>
               <tbody>
               </tbody>
               <tfooter>
-                <th>Cosechas Plantacion</th>
+              <th> Plantacion</th>
+                <th> Fecha</th>
+                <th> Cantidad</th>              
               </tfooter>
             </table>
             </div>

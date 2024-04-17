@@ -335,13 +335,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container-fluid">
           <div class="row">
 
+          <h1>Ingresar Equipos Agricolas</h1>
             <form method="POST" action='../../controller/equiposController.php'>
                           
                 <!-- Campo de Teléfono -->
-                <div class="mb-3">
-                <label for="id" class="form-label">Id:</label>
-                <input type="number" name="id" class="form-control" id="id" placeholder="Ingresar id">
-              </div>
+                
 
               <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre:</label>

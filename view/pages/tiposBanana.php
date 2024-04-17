@@ -338,9 +338,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <form method="POST" action='../../controller/TbananaController.php'>
              
               <!-- Campo de Correo Electrónico -->
-              <div class="mb-3">
-                <label for="id" class="form-label">id:</label>
-                <input type="number" name="id" class="form-control" id="id" placeholder="Ingresar id">
+              
 </div>
 
               <!-- Campo de Teléfono -->

@@ -13,7 +13,7 @@ class EmpleadosController {
     public function agregarEmpleado() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Recibir datos del formulario HTML
-            $empleado_id=$_POST['id'];
+           
             $nombre = $_POST['nombre'];
             $edad = $_POST['edad'];
             $genero = $_POST['genero'];
@@ -24,7 +24,7 @@ class EmpleadosController {
             
 
             // Insertar la nueva plantación en la base de datos
-            $exito = $this->empleado->insertarEmpleado($empleado_id,$nombre,$edad,$genero,$rol,$ubicacion_id);
+            $exito = $this->empleado->insertarEmpleado($nombre,$edad,$genero,$rol,$ubicacion_id);
 
             if ($exito) {
                 // Redirigir o mostrar un mensaje de éxito

@@ -83,7 +83,7 @@ class CosechasPlantacion extends Conexion
             $resultado->execute();
             foreach ($resultado->fetchAll() as $encontrado) {
                 $dato = new CosechasPlantacion(); // Corregido el nombre de la clase
-                $dato->setPlantacion($encontrado["nombre_plantacion"]);
+                $dato->setPlantacion($encontrado["NOMBRE_PLANTACION"]);
                 $dato->setFecha($encontrado["FECHA"]);
                 $dato->setCantidad($encontrado["CANTIDAD"]);
                 $arr[] = $dato;

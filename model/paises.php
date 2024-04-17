@@ -9,11 +9,11 @@ class Paises {
         $this->conexion = $conexion;
     }
 
-    public function insertarPais($pais_id,$nombre) {
+    public function insertarPais($nombre) {
         try {
-            $consulta = $this->conexion->prepare("INSERT INTO Paises (pais_id,nombre) VALUES (?,?)");
-            $consulta ->bindParam(1,$pais_id);
-            $consulta->bindParam(2, $nombre);          
+            $consulta = $this->conexion->prepare("INSERT INTO Paises (nombre) VALUES (?)");
+           
+            $consulta->bindParam(1, $nombre);          
             $consulta->execute();
             return true; // Éxito
         } catch (PDOException $e) {

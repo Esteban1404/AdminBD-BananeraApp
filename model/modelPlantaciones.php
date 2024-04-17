@@ -9,12 +9,12 @@ class PlantacionModel {
         $this->conexion = $conexion;
     }
 
-    public function insertarPlantacion($plantacion_id,$nombre, $ubicacion_id) {
+    public function insertarPlantacion($nombre, $ubicacion_id) {
         try {
-            $consulta = $this->conexion->prepare("INSERT INTO Plantaciones (plantacion_id,nombre, ubicacion_id) VALUES (?, ?,?)");
-            $consulta ->bindParam(1,$plantacion_id);
-            $consulta->bindParam(2, $nombre);
-            $consulta->bindParam(3, $ubicacion_id);
+            $consulta = $this->conexion->prepare("INSERT INTO Plantaciones (nombre, ubicacion_id) VALUES ( ?,?)");
+            
+            $consulta->bindParam(1, $nombre);
+            $consulta->bindParam(2, $ubicacion_id);
             $consulta->execute();
             return true; // Éxito
         } catch (PDOException $e) {

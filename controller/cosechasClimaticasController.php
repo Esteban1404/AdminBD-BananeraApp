@@ -13,13 +13,13 @@ class CosechasClimaticasController {
     public function agregarCosecha() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Recibir datos del formulario HTML
-            $cosecha_id=$_POST['idCosecha'];
+          
             $plantacion_id = $_POST['idP'];
             $cantidad = $_POST['cantidad'];
             
 
             // Insertar la nueva plantación en la base de datos
-            $exito = $this->cosecha->insertarCosechas($cosecha_id,$plantacion_id,$cantidad);
+            $exito = $this->cosecha->insertarCosechas($plantacion_id,$cantidad);
 
             if ($exito) {
                 // Redirigir o mostrar un mensaje de éxito

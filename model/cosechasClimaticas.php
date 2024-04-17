@@ -9,12 +9,12 @@ class CosechasClimaticas {
         $this->conexion = $conexion;
     }
 
-    public function insertarCosechas($cosecha_id,$plantacion_id,$cantidad) {
+    public function insertarCosechas($plantacion_id,$cantidad) {
         try {
-            $consulta = $this->conexion->prepare("INSERT INTO Cosechas (cosecha_id,plantacion_id,fecha,cantidad) VALUES (?,?,SYSDATE,?)");
-            $consulta ->bindParam(1,$cosecha_id);
-            $consulta->bindParam(2, $plantacion_id);
-            $consulta->bindParam(3, $cantidad);
+            $consulta = $this->conexion->prepare("INSERT INTO Cosechas (plantacion_id,fecha,cantidad) VALUES (?,SYSDATE,?)");
+            
+            $consulta->bindParam(1, $plantacion_id);
+            $consulta->bindParam(2, $cantidad);
            
             
             $consulta->execute();

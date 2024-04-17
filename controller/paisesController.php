@@ -13,12 +13,12 @@ class PaisesController {
     public function agregarPais() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Recibir datos del formulario HTML
-            $pais_id=$_POST['id'];
+            
             $nombre=$_POST['nombre'];
             
 
             // Insertar la nueva plantación en la base de datos
-            $exito = $this->paises->insertarPais($pais_id,$nombre);
+            $exito = $this->paises->insertarPais($nombre);
 
             if ($exito) {
                 // Redirigir o mostrar un mensaje de éxito

@@ -335,12 +335,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container-fluid">
           <div class="row">
 
+          <h1>Ingresar Empleados</h1>
           <form method="POST" action='../../controller/empleadosController.php'>
               <!-- Campo de Nombre -->
-              <div class="mb-3">
-                <label for="id" class="form-label">Id:</label>
-                <input type="number"  name="id" class="form-control" id="id" placeholder="Ingresa el id">
-              </div>
+             
               
               <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre:</label>

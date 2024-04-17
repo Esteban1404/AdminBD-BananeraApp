@@ -334,13 +334,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container-fluid">
           <div class="row">
 
+
+          <h1>Ingresar cosechas</h1>
           <form method="POST" action='../../controller/cosechasClimaticasController.php'>
               <!-- Campo de Nombre -->
-              <div class="mb-3">
-                <label for="id" class="form-label">Cosecha ID:</label>
-                <input type="number" class="form-control" name="idCosecha" id="idCosecha" placeholder="Ingresar ID cosecha">
-              </div>
-
+              
               <!-- Campo de Correo Electrónico -->
               <div class="mb-3">
                 <label for="idPlantacion" class="form-label">Plantacion ID:</label>

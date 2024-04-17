@@ -1,31 +1,32 @@
-/*Funcion para cargar el listado en el Datatable*/
 function listarUsuariosTodos() {
-    tabla = $('#tbllistado').dataTable({
-      aProcessing: true, // Activamos el procesamiento de datatables
-      aServerSide: true, // Paginación y filtrado del lado del servidor
-      dom: 'Bfrtip', // Definimos los elementos del control de tabla
+  tabla = $('#tbllistado').dataTable({
+      processing: true,
+      serverSide: true,
+      dom: 'Bfrtip',
       buttons: ['copyHtml5', 'excelHtml5', 'csvHtml5', 'pdf'],
       ajax: {
-        url: '../../controller/bPaisController.php?op=listar_para_tabla',
-        type: 'get',
-        dataType: 'json',
-        success: function(response) {
-            console.log('Datos recibidos correctamente:', response);
-            // Inicializar DataTables con los datos recibidos
-            $('#tbllistado').DataTable({
-                data: response.aaData, // Pasar los datos recibidos como el origen de los datos
-                destroy: true, // Destruir la tabla existente antes de crear una nueva
-                columns: [
-                    { title: 'Paises' } // Definir las columnas de la tabla
-                ]
-            });
-        },
-        error: function (xhr, status, error) {
-          console.log('Error en la solicitud AJAX:', error);
-        }
+          url: '../../controller/cosechasController.php?op=listar_para_tabla',
+          type: 'GET',
+          dataType: 'json',
+          success: function(response) {
+              console.log('Datos recibidos correctamente:', response);
+              // Inicializar DataTables con los datos recibidos
+              $('#tbllistado').DataTable({
+                  data: response.aaData,
+                  destroy: true,
+                  columns: [
+                      { title: 'Plantacion', mData: 0 },
+                      { title: 'Fecha', mData: 1 },
+                      { title: 'Cantidad', mData: 2 }
+                  ]
+              });
+          },
+          error: function(xhr, status, error) {
+              console.log('Error en la solicitud AJAX:', error);
+          }
       },
-      iDisplayLength: 5,
-    });
-  }
-  
-  listarUsuariosTodos();
+      iDisplayLength: 5
+  });
+}
+
+listarUsuariosTodos();

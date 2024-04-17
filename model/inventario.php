@@ -75,9 +75,9 @@ class Inventario extends Conexion
             $resultado->execute();
             foreach ($resultado->fetchAll() as $encontrado) {
                 $dato = new Inventario(); // Corregido el nombre de la clase
-                $dato->setProvedor($encontrado["nombre_proveedor"]);
-                $dato->setUbicacion($encontrado["nombre_ubicacion"]);
-                $dato->setCantidad($encontrado["cantidad_disponible"]);
+                $dato->setProvedor($encontrado["NOMBRE_PROVEEDOR"]);
+                $dato->setUbicacion($encontrado["NOMBRE_UBICACION"]);
+                $dato->setCantidad($encontrado["CANTIDAD_DISPONIBLE"]);
                 $arr[] = $dato;
             }
             self::desconectar();

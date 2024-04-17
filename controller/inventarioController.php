@@ -7,7 +7,7 @@ switch ($_GET["op"]) {
         $inventarios = $inventario->listarInventarioDb();
         $data = array();       
 
-        foreach ($inventario as $reg) {
+        foreach ($inventarios as $reg) {
             $data[] = array(
                 $reg->getProvedor(),
                 $reg->getubicacion(),

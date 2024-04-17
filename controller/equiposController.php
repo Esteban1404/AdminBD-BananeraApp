@@ -13,13 +13,13 @@ class EquiposController {
     public function agregarEquipo() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Recibir datos del formulario HTML
-            $equipo_id=$_POST['id'];
+            
             $nombre=$_POST['nombre'];
             
             
 
             // Insertar la nueva plantación en la base de datos
-            $exito = $this->equipo->insertarEquipo($equipo_id,$nombre);
+            $exito = $this->equipo->insertarEquipo($nombre);
 
             if ($exito) {
                 // Redirigir o mostrar un mensaje de éxito
