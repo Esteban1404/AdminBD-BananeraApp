@@ -1,28 +1,30 @@
 
 <?php
-require_once '../config/Conexion.php'; // Ajusta la ruta si es necesario
 
-class ModelBTiposBanana {
-   
+require_once "../Config/Conexion.php";
 
+class Banana extends Conexion
+{
+
+    // Consulta para obtener las fechas ocupadas\
     protected static $cnx;
-    private $nombre = null;
-   
+
+    private $banana;
 
     public function __construct()
     {
     }
-
-    public function getNombre()
+    public function getBanana()
     {
-        return $this->nombre;
-    }
-    public function setNombre($nombre)
-    {
-        $this->nombre = $nombre;
-    }
-   
 
+        return $this->banana;
+    }
+
+    public function setBanana($banana)
+    {
+
+        $this->banana = $banana;
+    }
     public static function getConexion()
     {
         self::$cnx = Conexion::conectar();
@@ -33,9 +35,10 @@ class ModelBTiposBanana {
         self::$cnx = null;
     }
 
-    public function listarTodosDb()
+
+public function listarBananasDb()
     {
-        $query = "SELECT nombre FROM TIPOS_BANANAS";
+        $query = "SELECT nombre FROM TIPOS_BANANA ";
         $arr = array();
         try {
             self::getConexion();
@@ -43,8 +46,8 @@ class ModelBTiposBanana {
             $resultado->execute();
             self::desconectar();
             foreach ($resultado->fetchAll() as $encontrado) {
-                $dato = new ModelBTiposBanana();
-                $dato->setNombre($encontrado['nombre']);               
+                $dato = new Banana();
+                $dato->setBanana($encontrado['nombre']);               
                 $arr[] = $dato;
             }
             return $arr;
@@ -55,5 +58,8 @@ class ModelBTiposBanana {
             return json_encode($error);
         }
     }
+
+
 }
-?>
+
+

@@ -241,12 +241,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <p>Cosechas y Condiciones Climaticas</p>
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a href="./tiposBanana.php" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Transacciones de Produccion</p>
-                  </a>
-                </li>
+                
               </ul>
             </li>
             <!--Menu de busqueda de datos -->
@@ -340,19 +335,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container-fluid">
           <div class="row">
 
-            <form>
+            <form method="POST" action='../../controller/TbananaController.php'>
              
-
               <!-- Campo de Correo Electrónico -->
               <div class="mb-3">
                 <label for="id" class="form-label">id:</label>
-                <input type="number" class="form-control" id="id" placeholder="Ingresar id">
-              </div>
+                <input type="number" name="id" class="form-control" id="id" placeholder="Ingresar id">
+</div>
 
               <!-- Campo de Teléfono -->
               <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ingresar nombre">
+                <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Ingresar nombre">
               </div>
 
               <!-- Botón de Enviar -->
@@ -390,7 +384,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- ./wrapper -->
 
   <!-- REQUIRED SCRIPTS -->
-
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../plugins//DataTables/datatables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap4.min.js"></script>
   <!-- jQuery -->
   <script src="../plugins/jquery/jquery.min.js"></script>
 

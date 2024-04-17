@@ -26,7 +26,7 @@ class Conexion
             $cn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
             // Mensaje de conexión exitosa
-            echo "Conexión exitosa a la base de datos Oracle.";
+           
             
             return $cn;
         } catch (PDOException $ex) {

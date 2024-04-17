@@ -241,12 +241,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <p>Cosechas y Condiciones Climaticas</p>
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a href="./transacciones.php" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Transacciones de Produccion</p>
-                  </a>
-                </li>
+                
               </ul>
             </li>
             <!--Menu de busqueda de datos -->
@@ -339,18 +334,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container-fluid">
           <div class="row">
 
-            <form>
+            <form method="POST" action='../../controller/paisesController.php'>
 
 
             <!-- Campo de Correo Electrónico -->
             <div class="mb-3">
                 <label for="id" class="form-label">id:</label>
-                <input type="number" class="form-control" id="correo" placeholder="Ingresar id">
+                <input type="number" class="form-control" name="id" id="id" placeholder="Ingresar id">
               </div>
               <!-- Campo de Nombre -->
               <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingresa tu nombre">
               </div>
 
               

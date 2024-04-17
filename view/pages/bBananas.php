@@ -241,12 +241,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <p>Cosechas y Condiciones Climaticas</p>
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a href="./transacciones.php" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Transacciones de Produccion</p>
-                  </a>
-                </li>
+                
               </ul>
             </li>
             <!--Menu de busqueda de datos -->
@@ -342,64 +337,63 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             <h1 class="mt-5">Búsqueda de Tipos de Banana</h1>
             <!-- Formulario de Búsqueda -->
-           <table id="cursoListado" class="table table-striped table-bordered table-hover">
-                 <thead>
-                     <th>Nombre</th>
-                         
-                              </thead>
-                                        <tbody>
-                                        </tbody>
-                                        <tfooter>
-                                            <th>Nombre</th>
-                                            
-                                        </tfooter>
-                                    </table>
-    
-        </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+            <table id="tbllistado" class="table table-striped table-bordered table-hover">
+              <thead>
+                <th>Tipo de Bananas</th>
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-    <div class="p-3">
-      <h5>Title</h5>
-      <p>Sidebar content</p>
-    </div>
-  </aside>
-  <!-- /.control-sidebar -->
+              </thead>
+              <tbody>
+              </tbody>
+              <tfooter>
+                <th>Tipos de Bananas</th>
+              </tfooter>
+            </table>
 
-  <!-- Main Footer -->
-  <footer class="main-footer">
-    <!-- To the right -->
-    <div class="float-right d-none d-sm-inline">
-      Anything you want
+          </div>
+          <!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content -->
     </div>
-    <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-  </footer>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+      <div class="p-3">
+        <h5>Title</h5>
+        <p>Sidebar content</p>
+      </div>
+    </aside>
+    <!-- /.control-sidebar -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <!-- To the right -->
+      <div class="float-right d-none d-sm-inline">
+        Anything you want
+      </div>
+      <!-- Default to the left -->
+      <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    </footer>
   </div>
   <!-- ./wrapper -->
 
   <!-- REQUIRED SCRIPTS -->
-  
-    </script>
-<!-- jQuery -->
-<script src="../plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../js/adminlte.min.js"></script>
-<!-- Funcion Js para insertar datos en la BD -->
-<script src="../js/datos.js"></script>
 
-<script src="../plugins/DataTables/datatables.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap4.min.js"></script>
-<script src="../plugins/bootbox/bootbox.min.js"></script>
+  </script>
+  <!-- jQuery -->
+  <script src="../plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../js/adminlte.min.js"></script>
+  <!-- Funcion Js para insertar datos en la BD -->
+  <script src="../js/datos.js"></script>
+
+  <script src="../plugins/DataTables/datatables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap4.min.js"></script>
+  <script src="../plugins/bootbox/bootbox.min.js"></script>
 </body>
 
 </html>

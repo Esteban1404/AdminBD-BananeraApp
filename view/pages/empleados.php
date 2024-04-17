@@ -241,12 +241,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <p>Cosechas y Condiciones Climaticas</p>
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a href="./transacciones.php" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Transacciones de Produccion</p>
-                  </a>
-                </li>
+              
               </ul>
             </li>
             <!--Menu de busqueda de datos -->
@@ -340,38 +335,38 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container-fluid">
           <div class="row">
 
-            <form>
+          <form method="POST" action='../../controller/empleadosController.php'>
               <!-- Campo de Nombre -->
               <div class="mb-3">
                 <label for="id" class="form-label">Id:</label>
-                <input type="number" class="form-control" id="id" placeholder="Ingresa el id">
+                <input type="number"  name="id" class="form-control" id="id" placeholder="Ingresa el id">
               </div>
               
               <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ingresar nombre">
+                <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Ingresar nombre">
               </div>
 
               <!-- Campo de Correo Electrónico -->
               <div class="mb-3">
                 <label for="edad" class="form-label">Edad:</label>
-                <input type="number" class="form-control" id="edad" placeholder="Ingresar edad">
+                <input type="number" name="edad" class="form-control" id="edad" placeholder="Ingresar edad">
               </div>
 
               <!-- Campo de Teléfono -->
               <div class="mb-3">
                 <label for="genero" class="form-label">Genero:</label>
-                <input type="text" class="form-control" id="genero" placeholder="Ingresar genero">
+                <input type="text" name="genero" class="form-control" id="genero" placeholder="Ingresar genero">
               </div>
 
               <div class="mb-3">
                 <label for="rol" class="form-label">Rol:</label>
-                <input type="text" class="form-control" id="rol" placeholder="Ingresar rol">
+                <input type="text" name="rol" class="form-control" id="rol" placeholder="Ingresar rol">
               </div>
 
               <div class="mb-3">
                 <label for="ubicacion" class="form-label">Ubicacion:</label>
-                <input type="number" class="form-control" id="ubicacacion" placeholder="Ingresar Ubicacion">
+                <input type="number" name="ubicacion_id" class="form-control" id="ubicacion_id" placeholder="Ingresar Ubicacion">
               </div>
 
 

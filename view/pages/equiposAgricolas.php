@@ -241,12 +241,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <p>Cosechas y Condiciones Climaticas</p>
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a href="./transacciones.php" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Transacciones de Produccion</p>
-                  </a>
-                </li>
+              
               </ul>
             </li>
             <!--Menu de busqueda de datos -->
@@ -340,9 +335,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container-fluid">
           <div class="row">
 
-            <form>
-              
-              
+            <form method="POST" action='../../controller/equiposController.php'>
+                          
                 <!-- Campo de Teléfono -->
                 <div class="mb-3">
                 <label for="id" class="form-label">Id:</label>

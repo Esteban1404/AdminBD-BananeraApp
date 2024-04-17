@@ -241,12 +241,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <p>Cosechas y Condiciones Climaticas</p>
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a href="./transacciones.php" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Transacciones de Produccion</p>
-                  </a>
-                </li>
+               
               </ul>
             </li>
             <!--Menu de busqueda de datos -->
@@ -339,24 +334,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container-fluid">
           <div class="row">
 
-            <form>
+          <form method="POST" action='../../controller/cosechasClimaticasController.php'>
               <!-- Campo de Nombre -->
               <div class="mb-3">
                 <label for="id" class="form-label">Cosecha ID:</label>
-                <input type="number" class="form-control" id="id" placeholder="Ingresar ID cosecha">
+                <input type="number" class="form-control" name="idCosecha" id="idCosecha" placeholder="Ingresar ID cosecha">
               </div>
 
               <!-- Campo de Correo Electrónico -->
               <div class="mb-3">
                 <label for="idPlantacion" class="form-label">Plantacion ID:</label>
-                <input type="number" class="form-control" id="id" placeholder="Ingresar ID plantacion">
+                <input type="number" class="form-control" name="idP" id="idP" placeholder="Ingresar ID plantacion">
               </div>
 
-              <!-- Campo de Teléfono -->
-              <div class="mb-3">
-                <label for="fecha" class="form-label">Fecha:</label>
-                <input type="date" class="form-control" id="fecha" placeholder="Ingresar fecha">
-              </div>
+              <!-- Campo de Teléfono -->             
               <div class="mb-3">
                 <label for="cantidad" class="form-label">Cantidad:</label>
                 <input type="number" class="form-control" id="cantidad" placeholder="Ingresar cantidad">
