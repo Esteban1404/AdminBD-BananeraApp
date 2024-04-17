@@ -1,4 +1,3 @@
-
 /*Funcion para cargar el listado en el Datatable*/
 function listarUsuariosTodos() {
     tabla = $('#tbllistado').dataTable({
@@ -7,19 +6,19 @@ function listarUsuariosTodos() {
       dom: 'Bfrtip', // Definimos los elementos del control de tabla
       buttons: ['copyHtml5', 'excelHtml5', 'csvHtml5', 'pdf'],
       ajax: {
-        url: '../../controller/bananaController.php?op=listar_para_tabla',
+        url: '../../controller/bPaisController.php?op=listar_para_tabla',
         type: 'get',
         dataType: 'json',
         success: function(response) {
-          console.log('Datos recibidos correctamente:', response);
-          // Inicializar DataTables con los datos recibidos
-          $('#tbllistado').dataTable({
-            data: response.aaData, // Pasar los datos recibidos como el origen de los datos
-            destroy: true, // Destruir la tabla existente antes de crear una nueva
-            columns: [
-              { title: 'Tipos de Bananas' } // Definir las columnas de la tabla
-            ]
-          });
+            console.log('Datos recibidos correctamente:', response);
+            // Inicializar DataTables con los datos recibidos
+            $('#tbllistado').DataTable({
+                data: response.aaData, // Pasar los datos recibidos como el origen de los datos
+                destroy: true, // Destruir la tabla existente antes de crear una nueva
+                columns: [
+                    { title: 'Paises' } // Definir las columnas de la tabla
+                ]
+            });
         },
         error: function (xhr, status, error) {
           console.log('Error en la solicitud AJAX:', error);

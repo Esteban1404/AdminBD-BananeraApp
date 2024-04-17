@@ -1,30 +1,26 @@
-
 <?php
 
 require_once "../Config/Conexion.php";
 
-class Banana extends Conexion
+class BPais extends Conexion
 {
-
-    // Consulta para obtener las fechas ocupadas\
     protected static $cnx;
-
     private $nombre;
 
     public function __construct()
     {
     }
+
     public function getNombre()
     {
-
         return $this->nombre;
     }
 
     public function setNombre($nombre)
     {
-
         $this->nombre = $nombre;
     }
+
     public static function getConexion()
     {
         self::$cnx = Conexion::conectar();
@@ -35,31 +31,26 @@ class Banana extends Conexion
         self::$cnx = null;
     }
 
-
-public function listarBananasDb()
+    public function listarPaisesDb()
     {
-        $query = "SELECT NOMBRE FROM TIPOS_BANANAS ";
+        $query = "SELECT NOMBRE FROM PAISES";
         $arr = array();
         try {
             self::getConexion();
             $resultado = self::$cnx->prepare($query);
             $resultado->execute();
-            self::desconectar();
             foreach ($resultado->fetchAll() as $encontrado) {
-                $dato = new Banana();
-                $dato->setNombre($encontrado["NOMBRE"]);               
+                $dato = new BPais(); // Corregido el nombre de la clase
+                $dato->setNombre($encontrado["NOMBRE"]);
                 $arr[] = $dato;
             }
+            self::desconectar();
             return $arr;
         } catch (PDOException $Exception) {
             self::desconectar();
             $error = "Error " . $Exception->getCode() . ": " . $Exception->getMessage();
-            ;
-            return json_encode($error);
+            return $error;
         }
     }
-
-
 }
-
-
+?>

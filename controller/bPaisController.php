@@ -1,16 +1,20 @@
 <?php
-require_once '../model/banana.php';
+require_once '../model/bPais.php';
+
 switch ($_GET["op"]) {
     case 'listar_para_tabla':
-        $banana = new Banana();
-        $bananas = $banana->listarBananasDb();
+        $pais = new BPais();
+        $paises = $pais->listarPaisesDb();
         $data = array();       
 
-        foreach ($bananas as $reg) {
+        foreach ($paises as $reg) {
             $data[] = array(
                 $reg->getNombre() // Agregar cada fecha directamente al array
             );
+            
         }
+
+        
 
         // Construye el resultado como un simple array de datos
         $resultados = array(
@@ -25,3 +29,4 @@ switch ($_GET["op"]) {
         break;
        
 }
+
