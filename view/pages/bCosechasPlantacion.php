@@ -348,7 +348,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- Resultados de la Búsqueda -->
             <div id="searchResults" class="mt-5">
               <h2>Resultados de la Búsqueda</h2>
-              <div id="resultsTable"></div>
+              <table id="tbllistado" class="table table-striped table-bordered table-hover">
+              <thead>
+                <th>Cosechas Plantacion</th>
+
+              </thead>
+              <tbody>
+              </tbody>
+              <tfooter>
+                <th>Cosechas Plantacion</th>
+              </tfooter>
+            </table>
             </div>
           </div>
 
@@ -384,13 +394,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- REQUIRED SCRIPTS -->
 
-  <!-- jQuery -->
-  <script src="../plugins/jquery/jquery.min.js"></script>
-
-  <script src="../plugins/bootstrap/js/bootstrap.bundle.js"></script>
-
-  <!-- AdminLTE App -->
-  <script src="../js/adminlte.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../plugins//DataTables/datatables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap4.min.js"></script>
+  <!-- Funcion Js para insertar datos en la BD -->
+  <script src="../js/cosechasPlantacion.js"></script>
 </body>
 
 </html>
